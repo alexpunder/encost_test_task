@@ -1,0 +1,6 @@
+services:
+  test_task:
+    build: .
+    env_file: .env
+    ports:
+      - 8000:5050
