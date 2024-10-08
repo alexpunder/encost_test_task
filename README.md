@@ -1,13 +1,13 @@
 ## Описание проекта.
 
 _**Encost**_ - тестовое задание на FastAPI + Tortoise ORM, реализующее решение следующих поставленных задач:  
-Задание 1  
+- Задание 1  
     1) Написать роут, который принимает схему schemas.SchemaTask1  
     2) Отправить на роут input_start равный "2023-12-20T22:39:40" (таймзона UTC+3)  
     3) Найти все записи из endpoint_state где state_start >= input_start и endpoint_id = 139. Отсортировать данные по state_start desc.  
     4) Из данных, полученных в C, найти записи, где id строки кратен числу 3.  
     5) В ответ роут в формате json возвращает: “filtered_count” – количество полученных записей в пункте D, "state_id" - state_id у третьей записи из списка пункта D.  
-Задание 2  
+- Задание 2  
     1) Написать GET-роут, который реализует фильтрацию (используя query-параметры) данных из таблицы endpoint_states по следующим операторам:  
         1) endpoint_id: eq  
         2) state_name: eq  
@@ -18,11 +18,11 @@ _**Encost**_ - тестовое задание на FastAPI + Tortoise ORM, ре
     3) Роут возвращает json, в котором содержатся отфильтрованные записи со всеми колонками из таблицы endpoint_states, сортировка по state_start desc.  
     4) Получить результат с параметрами запроса endpoint_id__eq=139, state_reason__eq= Опоздание, state_start__gte=2024-01-30T08:57:56  
 
-Будет плюсом:  
+- Будет плюсом:  
     • Оформление swagger (/docs)  
     • Docker-файл  
 
-Требования:  
+- Требования:  
     1. Запрещается менять структуру или данные БД.  
     2. Требуется написать асинхронный сервис на стеке FastAPI + Tortoise ORM.  
     3. В таблице endpoint_states, в колонках state_start, state_end, время в таймзоне UTC+0, формат Unix MicroSecond  
@@ -64,9 +64,8 @@ poetry run python src/manage.py runserver
 
 ## Примеры запросов.
 
-1. Задание 1, пункт 5:  
-
 <details>
+    <summary>Задание 1, пункт 5</summary>
 
 ```
 {
@@ -77,9 +76,8 @@ poetry run python src/manage.py runserver
 
 </details>
 
-2. Задание 2, пункт 4:  
-
 <details>
+    <summary>Задание 2, пункт 4</summary>
 
 ```
 [
